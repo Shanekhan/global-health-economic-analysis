@@ -40,7 +40,7 @@ The core of this project is the **Silent Hunger Discovery Engine (SHDE)** logic,
 ├── README.md           # Project documentation
 └── requirements.txt    # List of dependencies
 
-
+```
 📊 Machine Learning Workflow
 Target Engineering: Converted raw mortality rates into a balanced 3-tier risk classification system.
 
@@ -52,6 +52,7 @@ Evaluation: Validated using Confusion Matrices and F1-Scores to ensure "High Ris
 The Shadow Effect: Economic shocks (Food Inflation) today show a measurable correlation with nutritional decline and mortality risk in the following year.
 
 Resource Efficiency: High health expenditure does not always guarantee low mortality; the efficiency of spending is a stronger predictor.
+
 
 👩‍💻 Author
 SHANZAY KHAN Data Analyst | Public Health & Applied Analytics 
