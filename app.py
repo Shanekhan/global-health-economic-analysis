@@ -88,23 +88,38 @@ with tab_exec:
     c4.metric("Avg Health Allocation", f"{latest_record['Health_Expenditure'].mean():.2f}%")
     st.divider()
     
-    # 🌍 MAP WITH HOVER FIX
-    fig_map = px.choropleth(latest_record, locations="Country Name", locationmode="country names", 
-                            color="Mortality_Rate", color_continuous_scale="Viridis", 
-                            template="plotly_dark", height=500)
+    # 🌍 MAP WITH FORCED HOVER VISIBILITY
+    fig_map = px.choropleth(
+        latest_record, 
+        locations="Country Name", 
+        locationmode="country names", 
+        color="Mortality_Rate", 
+        color_continuous_scale="Viridis", 
+        template="plotly_dark", 
+        height=500,
+        # Custom data taake hover mein mortality rate saaf dikhe
+        hover_data={"Mortality_Rate": ":.2f", "Country Name": True}
+    )
     
+    # FORCED TEXT AND BOX STYLING
     fig_map.update_traces(
+        hovertemplate="<b>%{location}</b><br>Mortality Rate: %{color:.2f}<extra></extra>",
         hoverlabel=dict(
-            bgcolor="#1e293b", 
-            font_size=14, 
-            font_color="white",
+            bgcolor="#1e293b",       # Dark Navy Background
+            bordercolor="#38bdf8",   # Neon Blue Border
+            font_size=15, 
+            font_color="white",      # FORCED WHITE TEXT
             font_family="Inter"
         )
     )
     
-    fig_map.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0}, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
+    fig_map.update_layout(
+        margin={"r": 0, "t": 0, "l": 0, "b": 0}, 
+        paper_bgcolor='rgba(0,0,0,0)', 
+        plot_bgcolor='rgba(0,0,0,0)',
+        geo=dict(bgcolor='rgba(0,0,0,0)', lakecolor='#0f172a')
+    )
     st.plotly_chart(fig_map, use_container_width=True)
-
 # --- TREND INTELLIGENCE ---
 with tab_data:
     st.subheader("Indicator Correlation & Historical Analysis")
