@@ -1,58 +1,131 @@
-# 🌍 Global Health & Economic Analysis: Mortality Risk Prediction
+# 🌍 Global Economic Mortality: Risk Prediction System
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![Scikit-Learn](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange)](https://scikit-learn.org/)
-[![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-red)](https://streamlit.io/)
+[![Streamlit](https://img.shields.io/badge/Live_Dashboard-Streamlit-red)](https://global-health-economic-analysis-4f3pemmspfmyta75xvj7n7.streamlit.app/)
 
-## 📌 Project Overview
-This project investigates the complex interplay between macroeconomic stability and public health. By integrating datasets from the **World Bank** and **World Food Programme (WFP)**, I developed a machine learning pipeline to predict mortality risk across 200+ countries (2000–2025).
-
-The core of this project is the **Silent Hunger Discovery Engine (SHDE)** logic, which identifies how food inflation and GDP fluctuations act as early warning signals for public health crises.
+## 🚀 Live Deployment
+**Explore the Interactive Research Dashboard:** 👉 [**Global Mortality Intelligence Hub**](https://global-health-economic-analysis-4f3pemmspfmyta75xvj7n7.streamlit.app/)
 
 ---
 
-## 🚀 Key Achievements
-- **High Accuracy:** Achieved **93.96% accuracy** using a Random Forest Classifier to categorize mortality risk (Low, Medium, High).
-- **Advanced Engineering:** Implemented **Temporal Lag Features** to capture the 12-month delayed impact of food price shocks on mortality.
-- **Actionable Insights:** Identified *Health Efficiency Index* and *GDP Stability* as the primary drivers of survival rates globally.
+## 📌 Project Overview
+This project investigates the complex interplay between macroeconomic stability and public health outcomes. By integrating datasets from the **World Bank** and **World Food Programme (WFP)**, I developed a machine learning pipeline to predict mortality risk across 200+ countries (2010–2025).
+
+The core of this project identifies how **Food Inflation** and **GDP fluctuations** act as early warning signals for public health crises, specifically focusing on the delayed physiological impact of economic shocks.
+
+---
+
+## 📂 Research & Development Workflow
+The project is structured across **4 Specialized Notebooks**, covering the end-to-end Data Science Lifecycle:
+
+1.  **`01_Data_Cleaning.ipynb`**: Wrangling multi-source data from World Bank (Health) and WFP (Economic).
+2.  **`02_EDA_Visual_Insights.ipynb`**: Statistical profiling, correlation heatmaps, and outlier detection.
+3.  **`03_Feature_Engineering.ipynb`**: Construction of **Temporal Lag Features** (12-month delay) and Risk Binning.
+4.  **`04_Model_Training.ipynb`**: Training the **Random Forest Classifier** and evaluating via Confusion Matrices.
 
 ---
 
 ## 🛠️ Tech Stack
-- **Languages:** Python (Pandas, NumPy)
-- **Machine Learning:** Scikit-Learn (Random Forest, Label Encoding, Train-Test Split)
-- **Visualization:** Seaborn, Matplotlib, Power BI
-- **Deployment:** Streamlit (In Progress 🏗️)
+- **Engine:** Python (Pandas, NumPy, Scikit-Learn)
+- **Modeling:** Random Forest Regression & Classification
+- **Visualization:** Plotly Express (Interactive UI), Seaborn, Matplotlib
+- **Deployment:** Streamlit Cloud
 
 ---
 
-## 📂 Project Structure
+## 📊 Key Analytical Achievements
+- **High Precision:** Achieved **93.96% accuracy** in categorizing Mortality Risk (Low, Medium, High).
+- **Temporal Modeling:** Successfully modeled the **"Shadow Effect"**—showing how food price shocks today correlate with mortality outcomes in the following fiscal year.
+- **Strategic Metrics:** Developed a *Health Efficiency Index* to measure the impact of GDP per capita vs. actual health outcomes.
+
+---
+
+## 📁 Repository Structure
 ```text
 ├── data/
-│   ├── raw/            # Original datasets from World Bank/WFP
-│   └── processed/      # Cleaned & merged final_dataset.csv
+│   └── processed/          # Unified research dataset (final_dataset.csv)
 ├── notebooks/
-│   ├── 01_Data_Cleaning.ipynb          # Data wrangling & standardization
-│   ├── 02_EDA_Visual_Insights.ipynb    # Statistical profiling & correlations
-│   ├── 03_Feature_Engineering.ipynb    # Lag variables & risk binning
-│   └── 04_Model_Training.ipynb         # Random Forest training & evaluation
-├── models/             # Saved .pkl files for deployment
-├── README.md           # Project documentation
-└── requirements.txt    # List of dependencies
-
+│   ├── 01_Data_Cleaning.ipynb
+│   ├── 02_EDA_Visual_Insights.ipynb
+│   ├── 03_Feature_Engineering.ipynb
+│   └── 04_Model_Training.ipynb
+├── app.py                  # Streamlit Dashboard Source Code
+├── mortality_model_final.pkl # Serialized Random Forest Model Bundle
+├── requirements.txt        # Production dependencies (scikit-learn, plotly, etc.)
+└── README.md
 ```
-📊 Machine Learning Workflow
-Target Engineering: Converted raw mortality rates into a balanced 3-tier risk classification system.
 
-Temporal Modeling: Created 1-year lags for Economic indicators to model delayed physiological impacts.
+Gemini said
+Bilkul Shanzay, ye raha tumhara Final Professional README. Maine ismein live link, tumhare charon notebooks ka structure, aur technical achievements ko AI-standard par set kar diya hai.
 
-Evaluation: Validated using Confusion Matrices and F1-Scores to ensure "High Risk" cases are captured with maximum precision.
+Bas GitHub par README.md mein Edit dabao, purana sab delete karo, aur ye Copy-Paste kar do:
 
-🔍 Key Insights
-The Shadow Effect: Economic shocks (Food Inflation) today show a measurable correlation with nutritional decline and mortality risk in the following year.
+Markdown
+# 🌍 Global Economic Mortality: Risk Prediction System
 
-Resource Efficiency: High health expenditure does not always guarantee low mortality; the efficiency of spending is a stronger predictor.
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
+[![Scikit-Learn](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange)](https://scikit-learn.org/)
+[![Streamlit](https://img.shields.io/badge/Live_Dashboard-Streamlit-red)](https://global-health-economic-analysis-4f3pemmspfmyta75xvj7n7.streamlit.app/)
+
+## 🚀 Live Deployment
+**Explore the Interactive Research Dashboard:** 👉 [**Global Mortality Intelligence Hub**](https://global-health-economic-analysis-4f3pemmspfmyta75xvj7n7.streamlit.app/)
+
+---
+
+## 📌 Project Overview
+This project investigates the complex interplay between macroeconomic stability and public health outcomes. By integrating datasets from the **World Bank** and **World Food Programme (WFP)**, I developed a machine learning pipeline to predict mortality risk across 200+ countries (2010–2025).
+
+The core of this project identifies how **Food Inflation** and **GDP fluctuations** act as early warning signals for public health crises, specifically focusing on the delayed physiological impact of economic shocks.
+
+---
+
+## 📂 Research & Development Workflow
+The project is structured across **4 Specialized Notebooks**, covering the end-to-end Data Science Lifecycle:
+
+1.  **`01_Data_Cleaning.ipynb`**: Wrangling multi-source data from World Bank (Health) and WFP (Economic).
+2.  **`02_EDA_Visual_Insights.ipynb`**: Statistical profiling, correlation heatmaps, and outlier detection.
+3.  **`03_Feature_Engineering.ipynb`**: Construction of **Temporal Lag Features** (12-month delay) and Risk Binning.
+4.  **`04_Model_Training.ipynb`**: Training the **Random Forest Classifier** and evaluating via Confusion Matrices.
+
+---
+
+## 🛠️ Tech Stack
+- **Engine:** Python (Pandas, NumPy, Scikit-Learn)
+- **Modeling:** Random Forest Regression & Classification
+- **Visualization:** Plotly Express (Interactive UI), Seaborn, Matplotlib
+- **Deployment:** Streamlit Cloud
+
+---
+
+## 📊 Key Analytical Achievements
+- **High Precision:** Achieved **93.96% accuracy** in categorizing Mortality Risk (Low, Medium, High).
+- **Temporal Modeling:** Successfully modeled the **"Shadow Effect"**—showing how food price shocks today correlate with mortality outcomes in the following fiscal year.
+- **Strategic Metrics:** Developed a *Health Efficiency Index* to measure the impact of GDP per capita vs. actual health outcomes.
+
+---
+
+## 📁 Repository Structure
+```text
+├── data/
+│   └── processed/          # Unified research dataset (final_dataset.csv)
+├── notebooks/
+│   ├── 01_Data_Cleaning.ipynb
+│   ├── 02_EDA_Visual_Insights.ipynb
+│   ├── 03_Feature_Engineering.ipynb
+│   └── 04_Model_Training.ipynb
+├── app.py                  # Streamlit Dashboard Source Code
+├── mortality_model_final.pkl # Serialized Random Forest Model Bundle
+├── requirements.txt        # Production dependencies (scikit-learn, plotly, etc.)
+└── README.md
+```
+
+🔍 Strategic Insights
+The Lag Factor: Economic volatility (Inflation) has a measurable delayed impact on public health resilience.
+
+Efficiency over Expenditure: National health spend is less predictive of survival than the efficiency of that spend relative to GDP stability.
 
 
-👩‍💻 Author
-SHANZAY KHAN Data Analyst | Public Health & Applied Analytics 
+
+Author: Shanzay Khan Data Analyst | Public Health & Applied Analytics Specialist
+
